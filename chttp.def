@@ -1,0 +1,5 @@
+LIBRARY chttp.dll
+EXPORTS
+	chttp_start	@1
+	chttp_tick	@2
+	chttp_stop	@3
