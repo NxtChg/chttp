@@ -23,7 +23,7 @@ class Connection
 	int  read(char *buf, int limit, bool extract = false);
 
 	void disconnect(){ if( is_ok  ()){ shutdown(s, SD_SEND);                 state = CLOSING; } }
-    void      close(){ if(!is_free()){ shutdown(s, SD_BOTH); closesocket(s); state = FREE;    } }
+	void      close(){ if(!is_free()){ shutdown(s, SD_BOTH); closesocket(s); state = FREE;    } }
 };//___________________________________________________________________________
 
 void Connection::setup(int id, SOCKET s, uint ip)

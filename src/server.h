@@ -231,7 +231,7 @@ int Server::start(char *address, chttp_cb user_cb)
 	
 	if(get_option(SO_RCVBUF, sz)) dbg("recv buffer size = %d", sz);
 	if(get_option(SO_SNDBUF, sz)) dbg("send buffer size = %d", sz);
-    */
+	*/
 
 	// bind and listen
 
@@ -333,7 +333,7 @@ void Server::stop()
 
 	till(Connections){ con[i].close(); } Connections = 0;
 
-    if(s != INVALID_SOCKET){ closesocket(s); s = INVALID_SOCKET; }
+	if(s != INVALID_SOCKET){ closesocket(s); s = INVALID_SOCKET; }
 
 	if(wsa_inited){ WSACleanup(); wsa_inited = false; }
 }
