@@ -29,27 +29,27 @@ char* get_mime(char *name)
 {
 	char *ext = strrchr(name, '.'); if(!ext) return NULL;
 
-	if(!stricmp(ext, ".html") == 0 || !stricmp(ext, ".htm" ) == 0) return "text/html";
-	if(!stricmp(ext, ".jpg")  == 0 || !stricmp(ext, ".jpeg") == 0) return "image/jpeg";
-	if(!stricmp(ext, ".gif")  == 0) return "image/gif";
-	if(!stricmp(ext, ".png")  == 0) return "image/png";
-	if(!stricmp(ext, ".ico")  == 0) return "image/x-icon";
-	if(!stricmp(ext, ".txt")  == 0) return "text/plain";
-	if(!stricmp(ext, ".csv")  == 0) return "text/csv";
-	if(!stricmp(ext, ".css")  == 0) return "text/css";
-	if(!stricmp(ext, ".js")   == 0) return "text/javascript";	// "application/javascript" is the correct type, but 'text' is more compatible...
-	if(!stricmp(ext, ".json") == 0) return "application/json";
-	if(!stricmp(ext, ".xml")  == 0) return "text/xml";			// again, should be "application/xml"
-	if(!stricmp(ext, ".au")   == 0) return "audio/basic";
-	if(!stricmp(ext, ".wav")  == 0) return "audio/wav";
-	if(!stricmp(ext, ".mp3")  == 0) return "audio/mpeg";
-	if(!stricmp(ext, ".ogg")  == 0) return "audio/ogg";
-	if(!stricmp(ext, ".otf")  == 0) return "font/otf";
-	if(!stricmp(ext, ".ttf")  == 0) return "font/ttf";
-	if(!stricmp(ext, ".woff") == 0) return "font/woff";
-	if(!stricmp(ext, ".woff2")== 0) return "font/woff2";
-	if(!stricmp(ext, ".avi")  == 0) return "video/x-msvideo";
-	if(!stricmp(ext, ".mpeg") == 0 || !stricmp(ext, ".mpg") == 0) return "video/mpeg";
+	if(!stricmp(ext, ".html"  ) || !stricmp(ext, ".htm" )) return "text/html";
+	if(!stricmp(ext, ".jpg"   ) || !stricmp(ext, ".jpeg")) return "image/jpeg";
+	if(!stricmp(ext, ".gif"  )) return "image/gif";
+	if(!stricmp(ext, ".png"  )) return "image/png";
+	if(!stricmp(ext, ".ico"  )) return "image/x-icon";
+	if(!stricmp(ext, ".txt"  )) return "text/plain";
+	if(!stricmp(ext, ".csv"  )) return "text/csv";
+	if(!stricmp(ext, ".css"  )) return "text/css";
+	if(!stricmp(ext, ".js"   )) return "text/javascript";	// "application/javascript" is the correct type, but 'text' is more compatible...
+	if(!stricmp(ext, ".json" )) return "application/json";
+	if(!stricmp(ext, ".xml"  )) return "text/xml";			// again, should be "application/xml"
+	if(!stricmp(ext, ".au"   )) return "audio/basic";
+	if(!stricmp(ext, ".wav"  )) return "audio/wav";
+	if(!stricmp(ext, ".mp3"  )) return "audio/mpeg";
+	if(!stricmp(ext, ".ogg"  )) return "audio/ogg";
+	if(!stricmp(ext, ".otf"  )) return "font/otf";
+	if(!stricmp(ext, ".ttf"  )) return "font/ttf";
+	if(!stricmp(ext, ".woff" )) return "font/woff";
+	if(!stricmp(ext, ".woff2")) return "font/woff2";
+	if(!stricmp(ext, ".avi"  )) return "video/x-msvideo";
+	if(!stricmp(ext, ".mpeg" ) || !stricmp(ext, ".mpg")) return "video/mpeg";
 
 	return NULL;
 }//____________________________________________________________________________
