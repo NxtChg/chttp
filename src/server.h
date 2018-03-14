@@ -211,7 +211,11 @@ int Server::start(char *address, chttp_cb user_cb)
 
 	if(!wsa_init()){ dbg("failed to init WinSock v2.2!"); return CHTTP_ERR_NET_FAILED; }
 
-	net_adr adr; if(!adr.set(address)) adr.any(); dbg("address parsed: %s", adr.str(true));
+	net_adr adr; if(!adr.set(address)) adr.any();
+	
+	if(adr.port == 0) adr.port = 80;
+	
+	dbg("address parsed: %s", adr.str(true));
 
 	// create and setup main socket
 
